@@ -1,0 +1,7 @@
+[
+{
+  "directory": "/home/nana/Desktop/Camera_test/build",
+  "command": "/usr/bin/g++  -I/home/nana/Desktop/Camera_test/include -isystem /usr/include/opencv4 -g -o CMakeFiles/test.dir/test.cpp.o -c /home/nana/Desktop/Camera_test/test.cpp",
+  "file": "/home/nana/Desktop/Camera_test/test.cpp"
+}
+]
