@@ -1,3 +1,0 @@
-/home/nana/Desktop/Camera_test/build/CMakeFiles/test.dir
-/home/nana/Desktop/Camera_test/build/CMakeFiles/edit_cache.dir
-/home/nana/Desktop/Camera_test/build/CMakeFiles/rebuild_cache.dir

@@ -9,8 +9,8 @@ using namespace io;
 
 int main()
 {
-  // std::string hk_serial_01 = "00K64848135";
-  // std::string hk_serial_02 = "DA1351666";
+  std::string hk_serial_01 = "00K64848135";
+  std::string hk_serial_02 = "DA1351666";
   // std::string mv_serial_1 = "042071320239";
   // HkCamera hcamera01(6, 0.5, hk_serial_01);
   // HkCamera hcamera02(6, 0.5, hk_serial_02);
@@ -31,5 +31,6 @@ int main()
     // std::cout << "02present frame rate" << hcamera02.pstValue.fCurValue << std::endl;
     if (waitKey(1) == 'q') break;
   }
+
   return 0;
 }
