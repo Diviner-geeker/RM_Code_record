@@ -20,9 +20,9 @@ include_directories(
 include_directories(
         ${OpenCV_LIBRARY_DIRS}
 )
-add_executable(openvino_kpt_class ${sourcefile} openvino_detect.cpp openvino_detect.h demo.cpp)
+add_executable(yolo_test ${sourcefile} openvino_detect.cpp openvino_detect.h demo.cpp)
 target_link_libraries(
-        openvino_kpt_class
+        yolo_test
         ${OpenCV_LIBS}
         ${InferenceEngine_LIBRARIES}
         fmt::fmt
