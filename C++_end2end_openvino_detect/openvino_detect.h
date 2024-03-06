@@ -13,32 +13,38 @@
 #include <inference_engine.hpp>
 
 using namespace InferenceEngine;
-#define IMG_SIZE  416  //推理图像大小,GMaster团队使用416x416作为图像推理大小
+#define IMG_SIZE 640 // 推理图像大小,GMaster团队使用416x416作为图像推理大小
 #define DEVICE "CPU" // 设备选择，Inter NUC13 应使用GNA，其他使用GPU
-#define VIDEO //是否展示推理视频
-#define MODEL_PATH  "/home/zr/armor_0805_int8.xml"
-#define CLS_NUM 14
+#define VIDEO        // 是否展示推理视频
+#define MODEL_PATH "model/middlev1.xml"
+// #define MODEL_PATH "model_s/middle_sim.xml"
+#define CLS_NUM 12
 #define NMS_THRESHOLD 0.25
 #define CONF_THRESHOLD 0.7
 #define SCORE_THRESHOLD 0.3
 #endif
 
-class yolo_detct {
+class yolo_detct
+{
 public:
     yolo_detct();
 
-    struct Object {
+    struct Object
+    {
         cv::Rect_<float> rect;
         int label;
         float prob;
     };
-    struct Resize {
+    struct Resize
+    {
         cv::Mat resized_image;
         int dw;
         int dh;
     };
 
     std::vector<Object> work(cv::Mat src_img);
+    const std::vector<std::string> class_names = {
+        "B1", "B2", "B3", "B4", "B5", "B7", "R1", "R2", "R3", "R4", "R5", "R7"};
 
 private:
     ov::Core core;
@@ -46,12 +52,9 @@ private:
     ov::CompiledModel compiled_model;
     ov::InferRequest infer_request;
     ov::Tensor input_tensor;
-    const std::vector<std::string> class_names = {
-            "B1", "B2", "B3", "B4", "B5", "BO", "BS", "R1", "R2", "R3", "R4", "R5", "RO", "RS"
-    };
 
-    static float sigmoid(float x) {
+    static float sigmoid(float x)
+    {
         return static_cast<float>(1.f / (1.f + exp(-x)));
     }
-
 };
