@@ -1,6 +1,3 @@
 {
-    "cmake.sourceDirectory": "/home/nana/Desktop/YOLO-of-RoboMaster-Keypoints-Detection-2023/C++_end2end_openvino_detect",
-    "files.associations": {
-        "chrono": "cpp"
-    }
+    "cmake.sourceDirectory": "/home/nana/Desktop/yolo_cpp_depoly/yolov5_openvino"
 }

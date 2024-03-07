@@ -1,4 +1,4 @@
-# Install script for directory: /home/nana/Desktop/YOLO-of-RoboMaster-Keypoints-Detection-2023/C++_end2end_openvino_detect
+# Install script for directory: /home/nana/Desktop/yolo_cpp_depoly/yolov5_openvino
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -50,5 +50,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/nana/Desktop/YOLO-of-RoboMaster-Keypoints-Detection-2023/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/nana/Desktop/yolo_cpp_depoly/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

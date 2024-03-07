@@ -57,10 +57,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/nana/Desktop/YOLO-of-RoboMaster-Keypoints-Detection-2023/C++_end2end_openvino_detect
+CMAKE_SOURCE_DIR = /home/nana/Desktop/yolo_cpp_depoly/yolov5_openvino
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/nana/Desktop/YOLO-of-RoboMaster-Keypoints-Detection-2023/build
+CMAKE_BINARY_DIR = /home/nana/Desktop/yolo_cpp_depoly/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -87,9 +87,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/nana/Desktop/YOLO-of-RoboMaster-Keypoints-Detection-2023/build/CMakeFiles /home/nana/Desktop/YOLO-of-RoboMaster-Keypoints-Detection-2023/build//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/nana/Desktop/yolo_cpp_depoly/build/CMakeFiles /home/nana/Desktop/yolo_cpp_depoly/build//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/nana/Desktop/YOLO-of-RoboMaster-Keypoints-Detection-2023/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/nana/Desktop/yolo_cpp_depoly/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -117,24 +117,24 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named openvino_kpt_class
+# Target rules for targets named yolo_test
 
 # Build rule for target.
-openvino_kpt_class: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 openvino_kpt_class
-.PHONY : openvino_kpt_class
+yolo_test: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 yolo_test
+.PHONY : yolo_test
 
 # fast build rule for target.
-openvino_kpt_class/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/openvino_kpt_class.dir/build.make CMakeFiles/openvino_kpt_class.dir/build
-.PHONY : openvino_kpt_class/fast
+yolo_test/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/yolo_test.dir/build.make CMakeFiles/yolo_test.dir/build
+.PHONY : yolo_test/fast
 
 demo.o: demo.cpp.o
 .PHONY : demo.o
 
 # target to build an object file
 demo.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/openvino_kpt_class.dir/build.make CMakeFiles/openvino_kpt_class.dir/demo.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/yolo_test.dir/build.make CMakeFiles/yolo_test.dir/demo.cpp.o
 .PHONY : demo.cpp.o
 
 demo.i: demo.cpp.i
@@ -142,7 +142,7 @@ demo.i: demo.cpp.i
 
 # target to preprocess a source file
 demo.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/openvino_kpt_class.dir/build.make CMakeFiles/openvino_kpt_class.dir/demo.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/yolo_test.dir/build.make CMakeFiles/yolo_test.dir/demo.cpp.i
 .PHONY : demo.cpp.i
 
 demo.s: demo.cpp.s
@@ -150,7 +150,7 @@ demo.s: demo.cpp.s
 
 # target to generate assembly for a file
 demo.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/openvino_kpt_class.dir/build.make CMakeFiles/openvino_kpt_class.dir/demo.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/yolo_test.dir/build.make CMakeFiles/yolo_test.dir/demo.cpp.s
 .PHONY : demo.cpp.s
 
 openvino_detect.o: openvino_detect.cpp.o
@@ -158,7 +158,7 @@ openvino_detect.o: openvino_detect.cpp.o
 
 # target to build an object file
 openvino_detect.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/openvino_kpt_class.dir/build.make CMakeFiles/openvino_kpt_class.dir/openvino_detect.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/yolo_test.dir/build.make CMakeFiles/yolo_test.dir/openvino_detect.cpp.o
 .PHONY : openvino_detect.cpp.o
 
 openvino_detect.i: openvino_detect.cpp.i
@@ -166,7 +166,7 @@ openvino_detect.i: openvino_detect.cpp.i
 
 # target to preprocess a source file
 openvino_detect.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/openvino_kpt_class.dir/build.make CMakeFiles/openvino_kpt_class.dir/openvino_detect.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/yolo_test.dir/build.make CMakeFiles/yolo_test.dir/openvino_detect.cpp.i
 .PHONY : openvino_detect.cpp.i
 
 openvino_detect.s: openvino_detect.cpp.s
@@ -174,7 +174,7 @@ openvino_detect.s: openvino_detect.cpp.s
 
 # target to generate assembly for a file
 openvino_detect.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/openvino_kpt_class.dir/build.make CMakeFiles/openvino_kpt_class.dir/openvino_detect.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/yolo_test.dir/build.make CMakeFiles/yolo_test.dir/openvino_detect.cpp.s
 .PHONY : openvino_detect.cpp.s
 
 # Help Target
@@ -185,7 +185,7 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... openvino_kpt_class"
+	@echo "... yolo_test"
 	@echo "... demo.o"
 	@echo "... demo.i"
 	@echo "... demo.s"
