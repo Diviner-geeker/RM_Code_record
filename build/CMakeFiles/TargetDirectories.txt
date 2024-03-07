@@ -1,0 +1,3 @@
+/home/nana/Desktop/YOLO-of-RoboMaster-Keypoints-Detection-2023/build/CMakeFiles/openvino_kpt_class.dir
+/home/nana/Desktop/YOLO-of-RoboMaster-Keypoints-Detection-2023/build/CMakeFiles/edit_cache.dir
+/home/nana/Desktop/YOLO-of-RoboMaster-Keypoints-Detection-2023/build/CMakeFiles/rebuild_cache.dir
