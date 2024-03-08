@@ -16,12 +16,12 @@ using namespace InferenceEngine;
 #define IMG_SIZE 640 // 推理图像大小,GMaster团队使用416x416作为图像推理大小
 #define DEVICE "CPU" // 设备选择，Inter NUC13 应使用GNA，其他使用GPU
 #define VIDEO        // 是否展示推理视频
-#define MODEL_PATH "model/small/small.xml"
+#define MODEL_PATH "model/v7/v7_1.xml"
 #define CLS_NUM 12
 #define NMS_THRESHOLD 0.25
 #define CONF_THRESHOLD 0.7
 #define SCORE_THRESHOLD 0.3
-#define MODEL_TYPE "yolov5"
+// #define MODEL_TYPE "yolov5"
 #endif
 
 class yolo_detct
