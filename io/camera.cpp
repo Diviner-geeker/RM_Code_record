@@ -6,11 +6,8 @@ Camera::Camera(int exposure)
 {
   exposure_ms_ = exposure;
   CameraSdkInit(1);
-  //枚举设备，并建立设备列表
   iStatus = CameraEnumerateDevice(&tCameraEnumList, &iCameraCounts);
-  printf("state = %d\n", iStatus);
 
-  printf("count = %d\n", iCameraCounts);
   //没有连接设备
   if (iCameraCounts == 0) throw std::runtime_error("Not found camera!");
 
@@ -22,6 +19,7 @@ Camera::Camera(int exposure)
   CameraSetAeState(hCamera, FALSE);  // 关闭自动曝光
   CameraSetExposureTime(hCamera, exposure_ms_ * 1e3);
   CameraSetIspOutFormat(hCamera, CAMERA_MEDIA_TYPE_BGR8);
+  CameraPlay(hCamera);
 };
 
 void Camera::read(cv::Mat & img)
