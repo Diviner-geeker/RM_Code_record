@@ -9,6 +9,9 @@ find_package(fmt REQUIRED)
 include_directories(${OpenCV_INCLUDE_DIRS})
 include_directories(include)
 
-add_executable(test test.cpp)
+# add_executable(test test.cpp)
 
-target_link_libraries(test ${OpenCV_LIBS} MvCameraControl fmt::fmt MVSDK)
+# target_link_libraries(test ${OpenCV_LIBS} MvCameraControl fmt::fmt MVSDK)
+
+add_executable(mvtest mv_test.cpp io/camera.cpp)
+target_link_libraries(mvtest ${OpenCV_LIBS} MVSDK )
